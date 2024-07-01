@@ -34,7 +34,7 @@ O projeto está organizado da seguinte forma:
 - **index.html**: Página inicial do site.
 - **produtos.html**: Página de exibição e compra dos produtos.
 - **contatos.html**: Página de contato para interação com os clientes.
-- **sobre.html**: Página com informações sobre a loja e a banda Nirvana.
+- **sobre.html**: Página com informações sobre a loja.
 
 ## Recursos Utilizados
 - **HTML**: Estruturação das páginas.
