@@ -23,7 +23,7 @@ Inspirados pelas cores originais da banda, nossa paleta preta e amarela traz um 
 - A colorimetria do logo da In Bloom também é influenciada pela própria colorimetria original do Nirvana.
 
 ## Paletas de Cores da In Bloom
-![In Bloom Cores](Cores.png)
+
 As cores que serão utilizadas em In Bloom serão inspiradas na paleta da própria banda Nirvana. As cores escolhidas são preto, amarelo e amarelo mostarda. Para homenagear ainda mais a banda, nomeei as cores com os nomes dos integrantes:
 - Preto será chamado de Cobain.
 - Dourado será Grohl.
