@@ -47,7 +47,7 @@
                         
                         <button type="submit" class="submit-btn">Enviar</button>
                     </form>
-                    <div id="confirmation-message-container"></div> <!-- Container para a mensagem de confirmação -->
+                    <div id="confirmation-message-container"></div>
                 </div>
             </div>
         </section>
@@ -57,10 +57,8 @@
             <a href="https://github.com/Maysa502/In-Bloom"><img src="github.png" alt="GitHub"></a>
             <a href="https://www.linkedin.com/in/maysaarruda"><img src="linkedin.png" alt="LinkedIn"></a>
             <a href="mailto:inbloomLoja87@gmail.com"><img src="google.png" alt="Gmail"></a>
-            
         </div>
     </footer>
-    <!-- No final do body em contatos.html -->
     <script>
         function showConfirmationMessage() {
             const messageContainer = document.getElementById('confirmation-message-container');
@@ -71,9 +69,7 @@
         }
     </script>
 
-    <!-- No final do body em todos os arquivos HTML -->
     <script>
-        // Animação de scroll suave para links internos
         document.addEventListener('DOMContentLoaded', function() {
             const links = document.querySelectorAll('a[href^="#"]');
             
@@ -84,17 +80,13 @@
                     const targetElement = document.getElementById(targetId);
                     if (targetElement) {
                         window.scrollTo({
-                            top: targetElement.offsetTop - 80, // Ajuste conforme necessário
+                            top: targetElement.offsetTop - 80,
                             behavior: 'smooth'
                         });
                     }
                 });
             });
 
-            // Animação de fade-in no carregamento da página
-            document.body.classList.add('loaded');
-
-            // Animação de clique para mudar de página
             const navItems = document.querySelectorAll('nav a');
             navItems.forEach(item => {
                 item.addEventListener('click', function(e) {
@@ -103,9 +95,11 @@
                     document.body.classList.remove('loaded');
                     setTimeout(() => {
                         window.location.href = href;
-                    }, 500); // Tempo para a animação de fade-out
+                    }, 500);
                 });
             });
+
+            document.body.classList.add('loaded');
         });
     </script>
 
