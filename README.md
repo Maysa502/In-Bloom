@@ -1,4 +1,4 @@
-# In Bloom: Lmebranças & Legado
+# In Bloom: Lembranças & Legado
 
 ![In Bloom Banner](MDBanner.png)
 
