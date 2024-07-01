@@ -15,7 +15,6 @@ Embora nosso público principal seja formado por fãs de todas as idades, encont
 Inspirados pelas cores originais da banda, nossa paleta preta e amarela traz um toque de nostalgia, enquanto a tipografia limpa e simples complementa nosso design elegante.
 
 ## Logo
-![In Bloom Logo](In_Bloom-logo.png)
 - O triângulo representa os três integrantes principais da banda: Kurt Cobain, Krist Novoselic e Dave Grohl.
 - A mulher alada é o símbolo da capa do último álbum da banda.
 - "In Bloom" é inspirada no nome de uma das melhores músicas do Nirvana.
