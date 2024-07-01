@@ -1,0 +1,673 @@
+/* Estilos globais */
+body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.logo {
+    max-height: 115px;
+    margin-left: 60px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-item {
+    color: #897834;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 60px;
+    border: 2px solid #897834;
+    margin-left: 15px;
+}
+
+.nav-item.active {
+    background-color: #897834;
+    color: black;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #897834;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: auto;
+}
+
+.social-icons img {
+    height: 15px;
+    margin-left: 140px;
+}
+
+/* Estilos para a página inicial */
+.pagina-inicial {
+    background-image: url('background-inicial.png');
+    /* Outros estilos específicos para a página inicial */
+}
+
+.intro {
+    width: 30%;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro h1 {
+    color: #e2cd65;
+    font-size: 32px;
+}
+
+.intro p {
+    color: #897834;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* Estilos para a página de produtos */
+.pagina-produtos {
+    background-image: url('background-produtos.png');
+    /* Outros estilos específicos para a página de produtos */
+}
+
+.produtos {
+    text-align: center;
+    color: #e2cd65;
+    margin: 20px 0;
+}
+
+.produtos-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.produtos-title::before,
+.produtos-title::after {
+    content: '';
+    flex: 1;
+    border-top: 2px solid #e2cd65;
+    margin: 0 10px;
+}
+
+.categoria {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #e2cd65;;
+}
+
+
+
+.categoria-item:hover {
+    border-color:  #e2cd65;;
+    color: #e2cd65;;
+}
+
+.dropdown-btn {
+    background-color: #897834;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.categoria:hover .dropdown-content {
+    display: block;
+}
+
+.produto-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.produto-item {
+    flex: 1 1 25%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #897834;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #e2cd65;
+    align-items: center;
+}
+
+.produto-img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+
+
+.produto-comprar,
+.produto-carrinho {
+    background-color: #897834;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.produto-comprar:hover,
+.produto-carrinho:hover {
+    background-color: olive;
+    color: black;
+}
+
+.produto-carrinho {
+    background-color: whitesmoke;
+}
+
+/* Estilos para a página Sobre */
+.about-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-top {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid #e2cd65;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-top h1 {
+    color: #e2cd65;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-side {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid #e2cd65;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: #e2cd65;
+    font-size: 32px;
+}
+
+.about-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid #e2cd65;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para a página de contatos */
+.pagina-contato {
+    background-image: url('background-contato.png');
+    /* Outros estilos específicos para a página de contato */
+}
+
+.contact-section {
+    padding: 20px;
+    text-align: center;
+    color: #897834;
+}
+
+.contact-title {
+    color: #897834;
+    font-size: 36px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.contact-title::before,
+.contact-title::after {
+    content: '';
+    flex: 1;
+    border-top: 2px solid #897834;
+    margin: 0 10px;
+}
+
+.contact-title::before {
+    left: -100px;
+}
+
+.contact-title::after {
+    right: -60px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Estilo para o bloco de informações da loja */
+.store-info {
+    width: 30%; /* Ajuste a largura conforme necessário */
+    background-color: rgba(0, 0, 0, 0.2); /* Ajuste a cor de fundo conforme necessário */
+    border: 2px solid #e2cd65; /* Ajuste a borda conforme necessário */
+    border-radius: 50px; /* Ajuste o arredondamento dos cantos conforme necessário */
+    padding: 20px; /* Ajuste o espaçamento interno conforme necessário */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajuste a sombra conforme necessário */
+}
+
+/* Estilo para o bloco do formulário de contato */
+.contact-form {
+    width: 45%; /* Ajuste a largura conforme necessário */
+    background-color: rgba(0, 0, 0, 0.2); /* Ajuste a cor de fundo conforme necessário */
+    border-radius: 10px; /* Ajuste o arredondamento dos cantos conforme necessário */
+    padding: 20px; /* Ajuste o espaçamento interno conforme necessário */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajuste a sombra conforme necessário */
+}
+
+.contact-form h2 {
+    color: #e2cd65;
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    color: #897834;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    color: #e2cd65;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #897834;
+    border-radius: 5px;
+    background-color: transparent; /* Fundo transparente */
+    color: #e2cd65;
+}
+
+.submit-btn {
+    background-color: #e2cd65;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para a página Sobre */
+
+.pagina-sobre {
+    background-image: url('background-sobre.png');
+    /* Outros estilos específicos para a página de contato */
+}
+
+
+.about-top {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none; /* Remove a borda */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Ou ajuste conforme necessário */
+    color: #e2cd65; /* Define a cor do texto como branco */
+}
+
+.about-top h1 {
+    color: whitesmoke;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-side {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none; /* Remove a borda */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: right; /* Ou ajuste conforme necessário */
+    color: #e2cd65; /* Define a cor do texto como branco */
+}
+
+
+
+.about-side {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none; /* Remove a borda */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-text {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    transform: rotate(360deg);
+    white-space: nowrap;
+    color: #897834; /* Define a cor do texto como branco */
+    font-size: 75px;
+    margin-left: 25px; /* Espaçamento entre o texto vertical e o conteúdo à direita */
+    letter-spacing: 20px; /* Espaçamento entre as letras */
+}
+
+.about-text {
+    flex-grow: 1; /* Permite que o conteúdo à esquerda ocupe todo o espaço disponível */
+}
+
+.about-text h3 {
+    color: whitesmoke; /* Cor do título dos blocos de texto */
+    font-size: 24px; /* Tamanho da fonte dos títulos */
+    margin-top: 0; /* Remove margem superior padrão dos títulos */
+}
+
+.about-text p {
+    color: #e2cd65; /* Cor do texto dentro dos blocos de texto */
+    font-size: 16px; /* Tamanho da fonte do texto */
+    line-height: 1.5; /* Espaçamento entre linhas do texto */
+    margin-top: 5px; /* Espaçamento superior entre os parágrafos */
+}
+
+
+.about-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none; /* Remove a borda */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Ou ajuste conforme necessário */
+    color: #897834; /* Define a cor do texto como branco */
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilos para a página Sobre */
+
+.pagina-produto-detalhe {
+    background-image: url('background-CompraProduto.png');
+    /* Outros estilos específicos para a página de compra de produtos */
+}
+
+/* Estilos adicionais para a página de detalhes do produto */
+.pagina-produto-detalhe .produto-detalhe {
+    padding: 20px;
+}
+
+.pagina-produto-detalhe .produto-titulo {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: olive; /* Cor dourada */
+}
+
+.pagina-produto-detalhe .produto-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagina-produto-detalhe .produto-imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.pagina-produto-detalhe .imagem-ampliada {
+    max-width: 100%;
+    height: auto;
+}
+
+.pagina-produto-detalhe .produto-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.pagina-produto-detalhe .produto-preco {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #897834; /* Cor dourada */
+}
+
+.pagina-produto-detalhe .produto-descricao {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #897834; /* Cor dourada */
+}
+
+.mensagem-carrinho {
+    font-size: 1em;
+    margin-top: 10px;
+    color: #897834; /* Cor dourada */
+}
+
+
+/* Estilo para a caixa de confirmação */
+.confirmation-message {
+    border: 2px solid #897834; /* Borda dourada */
+    color: whitesmoke; /* Texto verde */
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #897834; /* Fundo claro */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Estilos globais */
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.logo {
+    max-height: 115px;
+    margin-left: 60px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-item {
+    color: #897834;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 60px;
+    border: 2px solid #897834;
+    margin-left: 15px;
+}
+
+.nav-item.active {
+    background-color: #897834;
+    color: black;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #897834;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: auto;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* Animação de fade-in */
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+body.loaded {
+    opacity: 1;
+}
+
+/* Efeito de hover nos ícones sociais */
+.social-icons a {
+    transition: transform 0.3s;
+}
+.social-icons a:hover {
+    transform: scale(1.1);
+}

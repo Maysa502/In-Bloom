@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body class="pagina-produtos">
+    <header>
+        <img src="In_Bloom-logo.png" alt="Logo In Bloom" class="logo">
+        <nav>
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="produtos.html" class="nav-item active">Produtos</a>
+            <a href="contatos.html" class="nav-item">Contatos</a>
+            <a href="sobre.html" class="nav-item">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <h1>NewsVana</h1>
+            <div class="banner-container">
+                <img src="banner.png" alt="Banner" class="banner-img">
+                <div class="banner-nav">
+                    <span class="nav-circle"></span>
+                    <span class="nav-circle"></span>
+                    <span class="nav-circle"></span>
+                </div>
+            </div>
+        </section>
+        <section class="produtos">
+            <h1 class="produtos-title">Produtos</h1>
+            <div class="categoria">
+                <a href="#" class="nav-item todos">Todos</a>
+                
+            </div>
+            <div class="produto-lista">
+                <div class="produto-item">
+                    <a href="compra_produto.html?produto=produto1">
+                        <img src="produto1.png" alt="Produto 1" class="produto-img">
+                    </a>
+                    <h2 class="produto-nome">Disco - In Utero</h2>
+                    <p class="produto-preco">R$ 175,00</p>
+                </div>
+                <div class="produto-item">
+                    <a href="compra_produto.html?produto=produto2">
+                        <img src="produto2.png" alt="Produto 2" class="produto-img">
+                    </a>
+                    <h2 class="produto-nome">Poster - NeverMind 1</h2>
+                    <p class="produto-preco">R$ 40,00</p>
+                </div>
+                <div class="produto-item">
+                    <a href="compra_produto.html?produto=produto3">
+                        <img src="produto3.png" alt="Produto 3" class="produto-img">
+                    </a>
+                    <h2 class="produto-nome">Boneco Kunk Kurt Cobain 1</h2>
+                    <p class="produto-preco">R$ 478,99</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/Maysa502/In-Bloom"><img src="github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/maysaarruda"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="mailto:inbloomLoja87@gmail.com"><img src="google.png" alt="Gmail"></a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            const navItems = document.querySelectorAll('nav a');
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    document.body.classList.remove('loaded');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500);
+                });
+            });
+
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

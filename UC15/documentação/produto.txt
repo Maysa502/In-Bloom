@@ -1,0 +1,86 @@
+HTML Produto
+(
+
+INICIALIZAÇÃO
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo In Bloom" class="logo">
+        <nav>
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="produtos.html" class="nav-item active">Produtos</a>
+            <a href="contatos.html" class="nav-item">Contatos</a>
+            <a href="sobre.html" class="nav-item">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <h1>NewsVana</h1>
+            <div class="banner-container">
+                <!-- Placeholder para a imagem do banner -->
+                <img src="banner.png" alt="Banner" class="banner-img">
+                <!-- Ícones de navegação do banner -->
+                <div class="banner-nav">
+                    <span class="nav-circle"></span>
+                    <span class="nav-circle"></span>
+                    <span class="nav-circle"></span>
+                </div>
+            </div>
+        </section>
+        <section class="produtos">
+            <h1 class="produtos-title">Produtos</h1>
+            <div class="categoria">
+                <span class="categoria-item">Todos</span>
+                <span class="categoria-item">Bonecos</span>
+                <span class="categoria-item">CDs</span>
+                <span class="categoria-item">Vinils</span>
+                <span class="categoria-item">Camisetas</span>
+                <span class="categoria-item">Promoções</span>
+            </div>
+            <div class="produto-lista">
+                <!-- Exemplo de um produto -->
+                <div class="produto-item">
+                    <img src="produto1.png" alt="Produto 1" class="produto-img">
+                    <h2 class="produto-nome">Disco</h2>
+                    <p class="produto-preco">R$ 175,00</p>
+                    <button class="produto-comprar">Comprar</button>
+                    <button class="produto-carrinho">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto-item">
+                    <img src="produto2.png" alt="Produto 2" class="produto-img">
+                    <h2 class="produto-nome">Poster - NeverMind 1</h2>
+                    <p class="produto-preco">R$ 40,00</p>
+                    <button class="produto-comprar">Comprar</button>
+                    <button class="produto-carrinho">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto-item">
+                    <img src="produto3.png" alt="Produto 3" class="produto-img">
+                    <h2 class="produto-nome">Boneco Kunk Kurt Cobain 1</h2>
+                    <p class="produto-preco">R$ 478,99</p>
+                    <button class="produto-comprar">Comprar</button>
+                    <button class="produto-carrinho">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <img src="facebook-icon.png" alt="Facebook">
+            <img src="twitter-icon.png" alt="Twitter">
+            <img src="instagram-icon.png" alt="Instagram">
+        </div>
+    </footer>
+</body>
+</html>s
+
+)
+
+css
+
