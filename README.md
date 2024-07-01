@@ -60,7 +60,7 @@ Prepare-se para uma experiência única na In Bloom, uma loja criada com muito a
 
 ---
 
-### "The sun is gone, but I have a light." — *Nirvana, Dumb*
+## "The sun is gone, but I have a light." — *Nirvana, Dumb*
 
 ---
 
