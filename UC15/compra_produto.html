@@ -44,49 +44,42 @@
             <a href="https://github.com/Maysa502/In-Bloom"><img src="github.png" alt="GitHub"></a>
             <a href="https://www.linkedin.com/in/maysaarruda"><img src="linkedin.png" alt="LinkedIn"></a>
             <a href="mailto:inbloomLoja87@gmail.com"><img src="google.png" alt="Gmail"></a>
-            
         </div>
     </footer>
 
     <script src="scripts.js"></script>
-    <!-- No final do body em todos os arquivos HTML -->
-<!-- No final do body em todos os arquivos HTML -->
-<script>
-    // Animação de scroll suave para links internos
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('a[href^="#"]');
-        
-        links.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80, // Ajuste conforme necessário
-                        behavior: 'smooth'
-                    });
-                }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
-        });
 
-        // Animação de fade-in no carregamento da página
-        document.body.classList.add('loaded');
-
-        // Animação de clique para mudar de página
-        const navItems = document.querySelectorAll('nav a');
-        navItems.forEach(item => {
-            item.addEventListener('click', function(e) {
-                e.preventDefault();
-                const href = this.getAttribute('href');
-                document.body.classList.remove('loaded');
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 500); // Tempo para a animação de fade-out
+            const navItems = document.querySelectorAll('nav a');
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    document.body.classList.remove('loaded');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500); // Tempo para a animação de fade-out
+                });
             });
-        });
-    });
-</script>
 
+            document.body.classList.add('loaded');
+        });
+    </script>
 </body>
 </html>
