@@ -11,9 +11,6 @@ Na In Bloom, nos dedicamos a oferecer uma experiência de compra simples e segur
 ## Público-alvo
 Embora nosso público principal seja formado por fãs de todas as idades, encontramos inspiração nos novos admiradores da banda. Nosso design elegante e minimalista, com um layout intuitivo, reflete nosso compromisso em unir o passado e o presente do Nirvana.
 
-## Catálogo de Produtos
-Navegue pelo nosso catálogo e descubra produtos selecionados com carinho. Utilize nosso sistema de busca avançada e filtros por gênero, artista, ano de lançamento, estado de conservação e preço para encontrar exatamente o que procura. No processo de compra, garantimos um checkout fácil e diversas opções de pagamento para sua conveniência.
-
 ## Estilo Visual
 Inspirados pelas cores originais da banda, nossa paleta preta e amarela traz um toque de nostalgia, enquanto a tipografia limpa e simples complementa nosso design elegante.
 
