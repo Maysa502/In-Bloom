@@ -20,9 +20,10 @@ Inspirados pelas cores originais da banda, nossa paleta preta e amarela traz um 
 - A mulher alada é o símbolo da capa do último álbum da banda.
 - "In Bloom" é inspirada no nome de uma das melhores músicas do Nirvana.
 - **Slogan**: "Lembranças e Legado" transmite a mensagem que a In Bloom quer passar para seus clientes; são nas lembranças de souvenirs que vendemos que resgatamos e passamos adiante o legado da banda que revolucionou a forma de fazer rock nos anos 90.
-- A colorimetria dos dois logos da In Bloom também é influenciada pela própria colorimetria original do Nirvana.
+- A colorimetria do logo da In Bloom também é influenciada pela própria colorimetria original do Nirvana.
 
 ## Paletas de Cores da In Bloom
+![In Bloom Cores](Cores.png)
 As cores que serão utilizadas em In Bloom serão inspiradas na paleta da própria banda Nirvana. As cores escolhidas são preto, amarelo e amarelo mostarda. Para homenagear ainda mais a banda, nomeei as cores com os nomes dos integrantes:
 - Preto será chamado de Cobain.
 - Dourado será Grohl.
