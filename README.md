@@ -53,14 +53,11 @@ Prepare-se para uma experiência única na In Bloom, uma loja criada com muito a
 5. Faça o push para a branch: `git push origin minha-modificacao`
 6. Envie um pull request.
 
-## Autor
-Nome: Maysa Arruda
 
-GitHub: [Maysa502](https://github.com/Maysa502)
+
 
 ## Referências
-- [Site oficial do Nirvana](https://www.nirvana.com)
-- [Wikipedia: Nirvana (banda)](https://pt.wikipedia.org/wiki/Nirvana_(banda))
+
 
 ---
 
@@ -69,3 +66,4 @@ GitHub: [Maysa502](https://github.com/Maysa502)
 ---
 
 Para mais detalhes sobre a estrutura do projeto, configuração e contribuição, consulte a [documentação completa](documentacao.pdf).
+GitHub: [Maysa502](https://github.com/Maysa502)
