@@ -56,7 +56,12 @@ Prepare-se para uma experiência única na In Bloom, uma loja criada com muito a
 
 
 ## Referências
-
+- [Programa ONE - Oracle Next Education](https://www.oracle.com/br/education/oracle-next-education/)
+- [Curso de Html e CSS - Guanabara](https://youtu.be/Ejkb_YpuHWs?si=gmzLBkMnMcPpkM-U)
+- [Curso de JavaScript - Matheus Battisti](https://youtube.com/playlist?list=PLnDvRpP8BneysKU8KivhnrVaKpILD3gZ6&si=lNpKN8_ta5HXfZu1)
+- Javascript - Cangaceiro JavaScript - Uma Aventura no Sertão da Programação 
+- Html5 e CSS3 - Domine a Web do Futuro 
+- Desenvolvimento Web com HTML, CSS e JavaScript - Caelum, Curso WD-43
 
 ---
 
