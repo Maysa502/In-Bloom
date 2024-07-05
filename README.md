@@ -64,5 +64,5 @@ Prepare-se para uma experiência única na In Bloom, uma loja criada com muito a
 
 ---
 
-Para mais detalhes sobre a estrutura do projeto, configuração e contribuição, consulte a [documentação completa](compra_produto.html).
+Para mais detalhes sobre a estrutura do projeto, configuração e contribuição, consulte a [documentação completa](documentacao_codigo.md).
 
