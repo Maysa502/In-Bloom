@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Links para fontes google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body class="pagina-produtos">
+    <header>
+        <img src="In_Bloom-logo.png" alt="Logo In Bloom" class="logo">
+        <nav>
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="produtos.html" class="nav-item active">Produtos</a>
+            <a href="contatos.html" class="nav-item">Contatos</a>
+            <a href="sobre.html" class="nav-item">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <!-- banner -->
+        <section class="banner">
+            <h1>NewsVana</h1> <!--TITULO DO BANNER -->
+            <div class="banner-container">
+                <img src="banner.png" alt="Banner" class="banner-img">
+            </div>
+        </section>
+
+        <!-- produtos -->
+        <section class="produtos">
+            <h1 class="produtos-title">Produtos</h1>
+            <div class="categoria">
+                <a href="#" class="nav-item todos">Todos</a>
+            </div>
+            <div class="produto-lista">
+                <!--produtos da In Bloom -->
+                <div class="produto-item">
+                    <a href="compra_produto.html?produto=produto1">
+                        <img src="produto1.png" alt="Produto 1" class="produto-img">
+                    </a>
+                    <h2 class="produto-nome">Disco - In Utero</h2>
+                    <p class="produto-preco">R$ 175,00</p>
+                </div>
+                <div class="produto-item">
+                    <a href="compra_produto.html?produto=produto2">
+                        <img src="produto2.png" alt="Produto 2" class="produto-img">
+                    </a>
+                    <h2 class="produto-nome">Poster - NeverMind 1</h2>
+                    <p class="produto-preco">R$ 40,00</p>
+                </div>
+                <div class="produto-item">
+                    <a href="compra_produto.html?produto=produto3">
+                        <img src="produto3.png" alt="Produto 3" class="produto-img">
+                    </a>
+                    <h2 class="produto-nome">Boneco Kunk Kurt Cobain 1</h2>
+                    <p class="produto-preco">R$ 478,99</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/Maysa502/In-Bloom"><img src="github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/maysaarruda"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="mailto:inbloomLoja87@gmail.com"><img src="google.png" alt="Gmail"></a>
+        </div>
+    </footer>
+
+    <!-- Aplicando o mesmo codigo de js para garantir o funcionamento das paginas   -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            /* Colocando o efeito suave para seções da página */
+            const links = document.querySelectorAll('a[href^="#"]');
+            /* document.querySelectorAll() é um método que permite selecionar elementos do DOM
+            'a[href^="#"]' é o seletor CSS 
+            a: Seleciona todos os elementos âncora (link internos) (<a>)
+            [href^="#"]: Filtra apenas os elementos âncora que têm o atributo href começando com #
+            Resumindo essa linha foi usada para selecionar todos os links âncora da página role suavemente para seções específicas*/
+
+
+
+            /*Selecionando todos elementos do trecho anterior e executando*/
+            links.forEach(link => {
+                link.addEventListener('click', function(e) { // add um ouvinte de eventos
+                    e.preventDefault(); //  impedindo o comportamento padrão do navegador para outros links âncoras
+                    const targetId = this.getAttribute('href').substring(1);  // Obtém o ID do elemento alvo removend o '#'
+                    const targetElement = document.getElementById(targetId); // Encontra o elemento na página com o ID correspondente
+                    // Parte do código é importantissima para localizar os elemento na página para onde deseja rolar suavemente quando um link âncora é clicado
+
+
+                    if (targetElement) {
+                        window.scrollTo({ // Rola a página suavemente até o elemento de destino
+                            top: targetElement.offsetTop - 80, // Defindo a posição de rolagem com um deslocamento de 80 pixels do topo
+                            behavior: 'smooth' // Anima a rolagem suavemente
+                        });
+                    }
+                });
+            });
+
+            /* Transição suave ao navegar entre páginas */
+            const navItems = document.querySelectorAll('nav a'); // Selecionando todos os elementos âncora dentro do elemento <nav>
+            navItems.forEach(item => { // Itera sobre cada elemento âncora encontrado
+                item.addEventListener('click', function(e) { // Adicionando um ouvinte de evento de clique a cada link de navegação
+                    e.preventDefault();  // Impede  que navegue por outras paginas 
+                    const href = this.getAttribute('href'); // Obtém o href do link clicado
+                    document.body.classList.remove('loaded'); // Removendo a classe 'loaded'
+                    // dando um pequeno atraso no redirecionamento do URL
+                    setTimeout(() => { 
+                        window.location.href = href;
+                    }, 500); // (0,5 segundos) antes de redirecionar
+                });
+            });
+
+            document.body.classList.add('loaded'); /* Adicionando uma classe 'loaded' ao 'body' após o carregamento do conteúdo */
+        });
+    </script>
+</body>
+</html>
