@@ -10,11 +10,11 @@ Para facilitar o desenvolvimento e atender às especificações do cliente, o si
 
 ## Código Inicial
 
-Inicialmente, foram criadas as estruturas básicas das páginas usando HTML, estilos CSS para layout e formatação, e JavaScript para funcionalidades básicas. Este estágio focou na implementação fundamental do site, garantindo que todas as páginas estivessem funcionais e acessíveis.
+Inicialmente, foram criadas as estruturas básicas das páginas usando HTML, estilos CSS para layout e formatação. Este estágio focou na implementação fundamental do site, garantindo que todas as páginas estivessem funcionais e acessíveis.
 
 ## Finalização
 
-Posteriormente, o desenvolvimento foi expandido para incluir mais detalhes conforme as especificações detalhadas pelo cliente. Isso envolveu refinamentos no design, adição de interatividade avançada com JavaScript e ajustes finos para otimização de desempenho e experiência do usuário.
+Posteriormente, o desenvolvimento foi expandido para incluir mais detalhes conforme as especificações detalhadas pelo cliente. Isso envolveu refinamentos no design, adição de interatividade com JavaScript e ajustes finos para otimização de desempenho e experiência do usuário.
 
 ### Observação sobre o Processo
 
