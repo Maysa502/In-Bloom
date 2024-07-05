@@ -1,4 +1,4 @@
-/* Estilos globais */
+/* css do doc global */
 body {
     margin: 0;
     font-family: 'Lora', serif;
@@ -69,10 +69,10 @@ footer {
     margin-left: 140px;
 }
 
-/* Estilos para a página inicial */
+/* css para a página inicial */
 .pagina-inicial {
     background-image: url('background-inicial.png');
-    /* Outros estilos específicos para a página inicial */
+    
 }
 
 .intro {
@@ -102,10 +102,10 @@ footer {
 
 
 
-/* Estilos para a página de produtos */
+/* css para a página de produtos */
 .pagina-produtos {
     background-image: url('background-produtos.png');
-    /* Outros estilos específicos para a página de produtos */
+    
 }
 
 .produtos {
@@ -229,55 +229,6 @@ footer {
     background-color: whitesmoke;
 }
 
-/* Estilos para a página Sobre */
-.about-section {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.about-top {
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 2px solid #e2cd65;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: left;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.about-top h1 {
-    color: #e2cd65;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.about-side {
-    display: flex;
-    justify-content: flex-end;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 2px solid #e2cd65;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: right;
-}
-
-.vertical-text {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    color: #e2cd65;
-    font-size: 32px;
-}
-
-.about-bottom {
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 2px solid #e2cd65;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: left;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
 
 
@@ -294,11 +245,10 @@ footer {
 
 
 
-
-/* Estilos para a página de contatos */
+/* css para a página de contatos */
 .pagina-contato {
     background-image: url('background-contato.png');
-    /* Outros estilos específicos para a página de contato */
+    
 }
 
 .contact-section {
@@ -339,28 +289,28 @@ footer {
     align-items: flex-start;
 }
 
-/* Estilo para o bloco de informações da loja */
+/* bloco de informações da loja */
 .store-info {
-    width: 30%; /* Ajuste a largura conforme necessário */
-    background-color: rgba(0, 0, 0, 0.2); /* Ajuste a cor de fundo conforme necessário */
-    border: 2px solid #e2cd65; /* Ajuste a borda conforme necessário */
-    border-radius: 50px; /* Ajuste o arredondamento dos cantos conforme necessário */
-    padding: 20px; /* Ajuste o espaçamento interno conforme necessário */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajuste a sombra conforme necessário */
+    width: 30%; /* Ajustando a largura */
+    background-color: rgba(0, 0, 0, 0.2); /* Ajustando a cor de fundo */
+    border: 2px solid #e2cd65; 
+    border-radius: 50px; 
+    padding: 20px; /* espaçamento interno conforme necessário */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombreamento */
 }
 
-/* Estilo para o bloco do formulário de contato */
+/* css para o bloco do formulário de contato */
 .contact-form {
-    width: 45%; /* Ajuste a largura conforme necessário */
-    background-color: rgba(0, 0, 0, 0.2); /* Ajuste a cor de fundo conforme necessário */
-    border-radius: 10px; /* Ajuste o arredondamento dos cantos conforme necessário */
-    padding: 20px; /* Ajuste o espaçamento interno conforme necessário */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajuste a sombra conforme necessário */
+    width: 45%; /* largura  */
+    background-color: rgba(0, 0, 0, 0.2); /* 0.2 pra opacidade */
+    border-radius: 10px; 
+    padding: 20px; /* ajustando o espaçamento interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* sombreamento */
 }
 
 .contact-form h2 {
     color: #e2cd65;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /*espaçamento entre os elementos*/
 }
 
 .contact-form p {
@@ -369,15 +319,16 @@ footer {
 }
 
 .contact-form label {
-    display: block;
+    display: block; /*elemneto de bloco*/
     color: #e2cd65;
     margin-bottom: 5px;
 }
 
+/*css do formulario de envio do usuario*/
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 10px;
+    width: 100%; /*largura*/
+    padding: 10px; /*peenchimento interno de 10px*/
     margin-bottom: 10px;
     border: 1px solid #897834;
     border-radius: 5px;
@@ -388,10 +339,10 @@ footer {
 .submit-btn {
     background-color: #e2cd65;
     color: black;
-    padding: 10px 20px;
+    padding: 10px 20px; /*preenchimento do topo e pra direita*/
     border: none;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: pointer; /*colocando o cursor em formato de mão*/
     font-weight: bold;
 }
 
@@ -408,22 +359,21 @@ footer {
 
 
 
-/* Estilos para a página Sobre */
+/* cs para página Sobre */
 
 .pagina-sobre {
     background-image: url('background-sobre.png');
-    /* Outros estilos específicos para a página de contato */
-}
+    }
 
-
+/*css da parte superior*/
 .about-top {
-    background-color: rgba(0, 0, 0, 0.2);
-    border: none; /* Remove a borda */
+    background-color: rgba(0, 0, 0, 0.2); /*fundo quase transparente*/
+    border: none; 
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Ou ajuste conforme necessário */
-    color: #e2cd65; /* Define a cor do texto como branco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*sombra*/
+    text-align: left; /* alinhando o txt */
+    color: #e2cd65; 
 }
 
 .about-top h1 {
@@ -434,14 +384,14 @@ footer {
 
 .about-side {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /*deixando espaço para a esquerda, alinhando os itens para a direita*/
     background-color: rgba(0, 0, 0, 0.2);
-    border: none; /* Remove a borda */
+    border: none; 
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: right; /* Ou ajuste conforme necessário */
-    color: #e2cd65; /* Define a cor do texto como branco */
+    text-align: right; /*deixando o txt na direita*/
+    color: #e2cd65; 
 }
 
 
@@ -450,10 +400,10 @@ footer {
     display: flex;
     justify-content: flex-end;
     background-color: rgba(0, 0, 0, 0.2);
-    border: none; /* Remove a borda */
+    border: none; 
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*sombreamento*/
 }
 
 .vertical-text {
@@ -461,38 +411,39 @@ footer {
     text-orientation: sideways;
     transform: rotate(360deg);
     white-space: nowrap;
-    color: #897834; /* Define a cor do texto como branco */
+    color: #897834; 
     font-size: 75px;
-    margin-left: 25px; /* Espaçamento entre o texto vertical e o conteúdo à direita */
-    letter-spacing: 20px; /* Espaçamento entre as letras */
+    margin-left: 25px; /* espaçamento entre o texto vertical e o conteúdo à direita */
+    letter-spacing: 20px; /* espaçamento entre as letras */
 }
 
 .about-text {
-    flex-grow: 1; /* Permite que o conteúdo à esquerda ocupe todo o espaço disponível */
+    flex-grow: 1; /*conteúdo à esquerda ocupando todo o espaço disponível */
 }
 
 .about-text h3 {
-    color: whitesmoke; /* Cor do título dos blocos de texto */
-    font-size: 24px; /* Tamanho da fonte dos títulos */
-    margin-top: 0; /* Remove margem superior padrão dos títulos */
+    color: whitesmoke; 
+    font-size: 24px; 
+    margin-top: 0; /* removendo as margens superior padrão dos títulos */
 }
 
 .about-text p {
-    color: #e2cd65; /* Cor do texto dentro dos blocos de texto */
-    font-size: 16px; /* Tamanho da fonte do texto */
-    line-height: 1.5; /* Espaçamento entre linhas do texto */
-    margin-top: 5px; /* Espaçamento superior entre os parágrafos */
+    color: #e2cd65; 
+    font-size: 16px; 
+    line-height: 1.5; /* espaçamento entre linhas do texto */
+    margin-top: 5px; /* espaçamento superior entre os parágrafos */
 }
 
 
+/*txt do final da pagina*/
 .about-bottom {
     background-color: rgba(0, 0, 0, 0.2);
-    border: none; /* Remove a borda */
+    border: none; 
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Ou ajuste conforme necessário */
-    color: #897834; /* Define a cor do texto como branco */
+    text-align: left; /*alinhando o texto a esquerda*/
+    color: #897834; 
 }
 
 
@@ -504,14 +455,13 @@ footer {
 
 
 
-/* Estilos para a página Sobre */
+/* css para a página compra produto*/
 
 .pagina-produto-detalhe {
     background-image: url('background-CompraProduto.png');
-    /* Outros estilos específicos para a página de compra de produtos */
+    
 }
 
-/* Estilos adicionais para a página de detalhes do produto */
 .pagina-produto-detalhe .produto-detalhe {
     padding: 20px;
 }
@@ -520,7 +470,7 @@ footer {
     text-align: center;
     font-size: 2em;
     margin-bottom: 20px;
-    color: olive; /* Cor dourada */
+    color: olive; 
 }
 
 .pagina-produto-detalhe .produto-conteudo {
@@ -547,92 +497,36 @@ footer {
 .pagina-produto-detalhe .produto-preco {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #897834; /* Cor dourada */
+    color: #897834;
 }
 
 .pagina-produto-detalhe .produto-descricao {
     font-size: 1.2em;
     margin-bottom: 20px;
-    color: #897834; /* Cor dourada */
+    color: #897834; 
 }
 
 .mensagem-carrinho {
     font-size: 1em;
     margin-top: 10px;
-    color: #897834; /* Cor dourada */
+    color: #897834; 
 }
 
 
-/* Estilo para a caixa de confirmação */
+/* css caixa de confirmação */
 .confirmation-message {
-    border: 2px solid #897834; /* Borda dourada */
-    color: whitesmoke; /* Texto verde */
+    border: 2px solid #897834; 
+    color: whitesmoke;
     padding: 10px;
     margin: 10px 0;
-    background-color: #897834; /* Fundo claro */
-    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #897834; 
+    border-radius: 5px; 
     font-size: 16px;
     text-align: center;
 }
 
-/* Estilos globais */
-body {
-    margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    opacity: 0;
-    transition: opacity 1s ease-in;
-}
 
-body.loaded {
-    opacity: 1;
-}
-
-/* Estilos para o cabeçalho */
-header {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-}
-
-.logo {
-    max-height: 115px;
-    margin-left: 60px;
-}
-
-.logo img {
-    height: 100%;
-    width: auto;
-}
-
-nav {
-    display: flex;
-    gap: 10px;
-}
-
-.nav-item {
-    color: #897834;
-    text-decoration: none;
-    padding: 5px 15px;
-    border-radius: 60px;
-    border: 2px solid #897834;
-    margin-left: 15px;
-}
-
-.nav-item.active {
-    background-color: #897834;
-    color: black;
-}
-
-/* Estilos para o rodapé */
+/* css do rodapé */
 footer {
     background-color: #897834;
     padding: 10px;
@@ -655,7 +549,7 @@ footer {
     transform: scale(1.1);
 }
 
-/* Animação de fade-in */
+/* adicionando fade-in nas pgs */
 body {
     opacity: 0;
     transition: opacity 1s ease-in;
@@ -664,7 +558,7 @@ body.loaded {
     opacity: 1;
 }
 
-/* Efeito de hover nos ícones sociais */
+/* efeito nos ícones sociais */
 .social-icons a {
     transition: transform 0.3s;
 }
