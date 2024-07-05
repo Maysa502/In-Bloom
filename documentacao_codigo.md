@@ -1,5 +1,6 @@
 
 # Documentação do Site **In Bloom**
+![In Bloom Banner](DocumentaçãoBanner.png)
 
 Este documento descreve a abordagem de desenvolvimento para o site **In Bloom**, um projeto dedicado à venda de produtos temáticos da banda Nirvana.
 
