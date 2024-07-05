@@ -32,7 +32,8 @@ As cores que serão utilizadas em In Bloom serão inspiradas na paleta da própr
 O projeto está organizado da seguinte forma:
 
 - **index.html**: Página inicial do site.
-- **produtos.html**: Página de exibição e compra dos produtos.
+- **produtos.html**: Página de exibição dos produtos.
+- **compra_produto.html**: Página destinada na compra e detalhamento dos produtos. 
 - **contatos.html**: Página de contato para interação com os clientes.
 - **sobre.html**: Página com informações sobre a loja.
 
