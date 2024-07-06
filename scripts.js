@@ -21,37 +21,3 @@ const produtos = {
     }
 };
 
-// Detalhando os produtos
-function carregarProduto() {
-    // Obtém os parâmetros da URL
-    const params = new URLSearchParams(window.location.search);
-    const produtoId = params.get('produto');
-    
-    // Verifica se o produto existe nos dados simulados
-    if(produtos[produtoId]) {
-        document.getElementById('produto-titulo').textContent = produtos[produtoId].titulo;
-        document.getElementById('produto-preco').textContent = produtos[produtoId].preco;
-        document.getElementById('produto-descricao').textContent = produtos[produtoId].descricao;
-        document.getElementById('produto-imagem').src = produtos[produtoId].imagem;
-        document.getElementById('produto-imagem').alt = produtos[produtoId].titulo;
-    } else {
-        document.getElementById('produto-titulo').textContent = "Produto não encontrado";
-    }
-}
-
-// Função para adicionar o produto ao carrinho e exibir mensagem
-function adicionarAoCarrinho() {
-    const mensagemCarrinho = document.getElementById('mensagem-carrinho');
-    mensagemCarrinho.textContent = "Produto adicionado ao carrinho!";
-    mensagemCarrinho.style.color = "white";
-}
-
-// Função para exibir mensagem de compra
-function comprarProduto() {
-    const mensagemCompra = document.getElementById('mensagem-compra');
-    mensagemCompra.textContent = "Produto no carrinho aguardando pagamento.";
-    mensagemCompra.style.color = "green";
-}
-
-// chamando a função ao carregar a pagina
-window.onload = carregarProduto;
