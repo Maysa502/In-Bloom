@@ -8,7 +8,7 @@
 </head>
 <body class="pagina-contato">
     <header>
-        <img src="In_Bloom-logo.png" alt="Logo" class="logo">
+        <img src="img/banners/In_Bloom-logo.png" alt="Logo" class="logo">
         <nav>
             <a href="index.html" class="nav-item">Home</a>
             <a href="produtos.html" class="nav-item">Produtos</a>
@@ -59,12 +59,11 @@
     <!-- Rodapé da página -->
     <footer>
         <div class="social-icons">
-            <a href="https://github.com/Maysa502/In-Bloom"><img src="github.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/maysaarruda"><img src="linkedin.png" alt="LinkedIn"></a>
-            <a href="mailto:inbloomLoja87@gmail.com"><img src="google.png" alt="Gmail"></a>
+            <a href="https://github.com/Maysa502/In-Bloom"><img src="img/icons/github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/maysaarruda"><img src="img/icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="mailto:inbloomLoja87@gmail.com"><img src="img/icons/google.png" alt="Gmail"></a>
         </div>
     </footer>
-
     <!-- configurando a mensagem de confirmação por js -->
     <script>
         function showConfirmationMessage() {
@@ -75,55 +74,5 @@
             messageContainer.appendChild(messageDiv); // Colocando o 'div' ao contêiner de mensagens que criei la em cima
         }
     </script>
-
-     <!-- Aplicando o mesmo codigo de js para garantir o funcionamento das paginas   -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            /* Colocando o efeito suave para seções da página */
-            const links = document.querySelectorAll('a[href^="#"]');
-            /* document.querySelectorAll() é um método que permite selecionar elementos do DOM
-            'a[href^="#"]' é o seletor CSS 
-            a: Seleciona todos os elementos âncora (link internos) (<a>)
-            [href^="#"]: Filtra apenas os elementos âncora que têm o atributo href começando com #
-            Resumindo essa linha foi usada para selecionar todos os links âncora da página role suavemente para seções específicas*/
-
-
-
-            /*Selecionando todos elementos do trecho anterior e executando*/
-            links.forEach(link => {
-                link.addEventListener('click', function(e) { // add um ouvinte de eventos
-                    e.preventDefault(); //  impedindo o comportamento padrão do navegador para outros links âncoras
-                    const targetId = this.getAttribute('href').substring(1);  // Obtém o ID do elemento alvo removend o '#'
-                    const targetElement = document.getElementById(targetId); // Encontra o elemento na página com o ID correspondente
-                    // Parte do código é importantissima para localizar os elemento na página para onde deseja rolar suavemente quando um link âncora é clicado
-
-
-                    if (targetElement) {
-                        window.scrollTo({ // Rola a página suavemente até o elemento de destino
-                            top: targetElement.offsetTop - 80, // Defindo a posição de rolagem com um deslocamento de 80 pixels do topo
-                            behavior: 'smooth' // Anima a rolagem suavemente
-                        });
-                    }
-                });
-            });
-
-            /* Transição suave ao navegar entre páginas */
-            const navItems = document.querySelectorAll('nav a'); // Selecionando todos os elementos âncora dentro do elemento <nav>
-            navItems.forEach(item => { // Itera sobre cada elemento âncora encontrado
-                item.addEventListener('click', function(e) { // Adicionando um ouvinte de evento de clique a cada link de navegação
-                    e.preventDefault();  // Impede  que navegue por outras paginas 
-                    const href = this.getAttribute('href'); // Obtém o href do link clicado
-                    document.body.classList.remove('loaded'); // Removendo a classe 'loaded'
-                    // dando um pequeno atraso no redirecionamento do URL
-                    setTimeout(() => { 
-                        window.location.href = href;
-                    }, 500); // (0,5 segundos) antes de redirecionar
-                });
-            });
-
-            document.body.classList.add('loaded'); /* Adicionando uma classe 'loaded' ao 'body' após o carregamento do conteúdo */
-        });
-    </script>
-
 </body>
 </html>
