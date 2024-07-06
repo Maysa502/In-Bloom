@@ -77,17 +77,8 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial - In Bloom</title>
     <link rel="stylesheet" href="styles.css"> <!--vinculando o CSS -->
-    <style>
-        /* Adicionando uma transição de opacidade para suavizar o carregamento da página */
-        body {
-            opacity: 0; /* Opacidade inicial configurada para 0 */
-            transition: opacity 1s ease-in; /* Transição suave de opacidade de duração 1 segundo */
-        }
-        /* aplicado para o corpo enquanto carrega */
-        body.loaded {
-            opacity: 1; /*opacidade sendo aplicada pra 1*/
-        }
 
+    <style>
         /* Transição sobre os ícones sociais */
         .social-icons a {
             transition: transform 0.3s; /* Transição de 0.3 segundos para a propriedade transform - propriedade que permite aplicar transformações como escala e rotação. No caso dessa linha estou aplicando uma transição suave de 0.3s */
@@ -99,6 +90,7 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
         /*Portando o primeeiro trecho é posto o efeito e o segundo trecho de codigo é aplicado na interação do usuario*/
         }
     </style>
+
     <!-- Conexão com fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,7 +100,7 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
 <body class="pagina-inicial pagina-index">
     <header>
         <!-- Exibe o logo da loja In Bloom -->
-        <img src="In_Bloom-logo.png" alt="Logo In Bloom" class="logo">
+        <img src="img/banners/In_Bloom-logo.png" alt="Logo In Bloom" class="logo">
         
         <!-- Navegação principal -->
         <nav>
@@ -135,59 +127,11 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
     <footer>
         <!-- Ícones de redes sociais -->
         <div class="social-icons">
-            <a href="https://github.com/Maysa502/In-Bloom"><img src="github.png" alt="GitHub"></a> <!-- Link para GitHub -->
-            <a href="https://www.linkedin.com/in/maysaarruda"><img src="linkedin.png" alt="LinkedIn"></a> <!-- Link para LinkedIn -->
-            <a href="mailto:inbloomLoja87@gmail.com"><img src="google.png" alt="Gmail"></a> <!-- Link para Gmail-->
+            <a href="https://github.com/Maysa502/In-Bloom"><img src="img/icons/github.png" alt="GitHub"></a> <!-- Link para GitHub -->
+            <a href="https://www.linkedin.com/in/maysaarruda"><img src="img/icons/linkedin.png" alt="LinkedIn"></a> <!-- Link para LinkedIn -->
+            <a href="mailto:inbloomLoja87@gmail.com"><img src="img/icons/google.png" alt="Gmail"></a> <!-- Link para Gmail-->
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            /* Colocando o efeito suave para seções da página */
-            const links = document.querySelectorAll('a[href^="#"]');
-            /* document.querySelectorAll() é um método que permite selecionar elementos do DOM
-            'a[href^="#"]' é o seletor CSS 
-            a: Seleciona todos os elementos âncora (link internos) (<a>)
-            [href^="#"]: Filtra apenas os elementos âncora que têm o atributo href começando com #
-            Resumindo essa linha foi usada para selecionar todos os links âncora da página role suavemente para seções específicas*/
-
-
-
-            /*Selecionando todos elementos do trecho anterior e executando*/
-            links.forEach(link => {
-                link.addEventListener('click', function(e) { // add um ouvinte de eventos
-                    e.preventDefault(); //  impedindo o comportamento padrão do navegador para outros links âncoras
-                    const targetId = this.getAttribute('href').substring(1);  // Obtém o ID do elemento alvo removend o '#'
-                    const targetElement = document.getElementById(targetId); // Encontra o elemento na página com o ID correspondente
-                    // Parte do código é importantissima para localizar os elemento na página para onde deseja rolar suavemente quando um link âncora é clicado
-
-
-                    if (targetElement) {
-                        window.scrollTo({ // Rola a página suavemente até o elemento de destino
-                            top: targetElement.offsetTop - 80, // Defindo a posição de rolagem com um deslocamento de 80 pixels do topo
-                            behavior: 'smooth' // Anima a rolagem suavemente
-                        });
-                    }
-                });
-            });
-
-            /* Transição suave ao navegar entre páginas */
-            const navItems = document.querySelectorAll('nav a'); // Selecionando todos os elementos âncora dentro do elemento <nav>
-            navItems.forEach(item => { // Itera sobre cada elemento âncora encontrado
-                item.addEventListener('click', function(e) { // Adicionando um ouvinte de evento de clique a cada link de navegação
-                    e.preventDefault();  // Impede  que navegue por outras paginas 
-                    const href = this.getAttribute('href'); // Obtém o href do link clicado
-                    document.body.classList.remove('loaded'); // Removendo a classe 'loaded'
-                    // dando um pequeno atraso no redirecionamento do URL
-                    setTimeout(() => { 
-                        window.location.href = href;
-                    }, 500); // (0,5 segundos) antes de redirecionar
-                });
-            });
-
-            document.body.classList.add('loaded'); /* Adicionando uma classe 'loaded' ao 'body' após o carregamento do conteúdo */
-        });
-    </script>
 </body>
 </html>
 ```
@@ -315,7 +259,7 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
 </head>
 <body class="pagina-produtos">
     <header>
-        <img src="In_Bloom-logo.png" alt="Logo In Bloom" class="logo">
+        <img src="img/banners/In_Bloom-logo.png" alt="Logo In Bloom" class="logo">
         <nav>
             <a href="index.html" class="nav-item">Home</a>
             <a href="produtos.html" class="nav-item active">Produtos</a>
@@ -328,7 +272,7 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
         <section class="banner">
             <h1>NewsVana</h1> <!--TITULO DO BANNER -->
             <div class="banner-container">
-                <img src="banner.png" alt="Banner" class="banner-img">
+                <img src="img/banners/banner.png" alt="Banner" class="banner-img">
             </div>
         </section>
 
@@ -341,22 +285,19 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
             <div class="produto-lista">
                 <!--produtos da In Bloom -->
                 <div class="produto-item">
-                    <a href="compra_produto.html?produto=produto1">
-                        <img src="produto1.png" alt="Produto 1" class="produto-img">
+                        <img src="img/banners/produto1.png" alt="Produto 1" class="produto-img">
                     </a>
                     <h2 class="produto-nome">Disco - In Utero</h2>
                     <p class="produto-preco">R$ 175,00</p>
                 </div>
                 <div class="produto-item">
-                    <a href="compra_produto.html?produto=produto2">
-                        <img src="produto2.png" alt="Produto 2" class="produto-img">
+                        <img src="img/banners/Produto2.png" alt="Produto 2" class="produto-img">
                     </a>
                     <h2 class="produto-nome">Poster - NeverMind 1</h2>
                     <p class="produto-preco">R$ 40,00</p>
                 </div>
                 <div class="produto-item">
-                    <a href="compra_produto.html?produto=produto3">
-                        <img src="produto3.png" alt="Produto 3" class="produto-img">
+                        <img src="img/banners/Produto3.png" alt="Produto 3" class="produto-img">
                     </a>
                     <h2 class="produto-nome">Boneco Kunk Kurt Cobain 1</h2>
                     <p class="produto-preco">R$ 478,99</p>
@@ -368,61 +309,13 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
     <!-- Rodapé -->
     <footer>
         <div class="social-icons">
-            <a href="https://github.com/Maysa502/In-Bloom"><img src="github.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/maysaarruda"><img src="linkedin.png" alt="LinkedIn"></a>
-            <a href="mailto:inbloomLoja87@gmail.com"><img src="google.png" alt="Gmail"></a>
+            <a href="https://github.com/Maysa502/In-Bloom"><img src="img/icons/github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/maysaarruda"><img src="img/icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="mailto:inbloomLoja87@gmail.com"><img src="img/icons/google.png" alt="Gmail"></a>
         </div>
     </footer>
-
-    <!-- Aplicando o mesmo codigo de js para garantir o funcionamento das paginas   -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            /* Colocando o efeito suave para seções da página */
-            const links = document.querySelectorAll('a[href^="#"]');
-            /* document.querySelectorAll() é um método que permite selecionar elementos do DOM
-            'a[href^="#"]' é o seletor CSS 
-            a: Seleciona todos os elementos âncora (link internos) (<a>)
-            [href^="#"]: Filtra apenas os elementos âncora que têm o atributo href começando com #
-            Resumindo essa linha foi usada para selecionar todos os links âncora da página role suavemente para seções específicas*/
-
-
-
-            /*Selecionando todos elementos do trecho anterior e executando*/
-            links.forEach(link => {
-                link.addEventListener('click', function(e) { // add um ouvinte de eventos
-                    e.preventDefault(); //  impedindo o comportamento padrão do navegador para outros links âncoras
-                    const targetId = this.getAttribute('href').substring(1);  // Obtém o ID do elemento alvo removend o '#'
-                    const targetElement = document.getElementById(targetId); // Encontra o elemento na página com o ID correspondente
-                    // Parte do código é importantissima para localizar os elemento na página para onde deseja rolar suavemente quando um link âncora é clicado
-
-
-                    if (targetElement) {
-                        window.scrollTo({ // Rola a página suavemente até o elemento de destino
-                            top: targetElement.offsetTop - 80, // Defindo a posição de rolagem com um deslocamento de 80 pixels do topo
-                            behavior: 'smooth' // Anima a rolagem suavemente
-                        });
-                    }
-                });
-            });
-
-            /* Transição suave ao navegar entre páginas */
-            const navItems = document.querySelectorAll('nav a'); // Selecionando todos os elementos âncora dentro do elemento <nav>
-            navItems.forEach(item => { // Itera sobre cada elemento âncora encontrado
-                item.addEventListener('click', function(e) { // Adicionando um ouvinte de evento de clique a cada link de navegação
-                    e.preventDefault();  // Impede  que navegue por outras paginas 
-                    const href = this.getAttribute('href'); // Obtém o href do link clicado
-                    document.body.classList.remove('loaded'); // Removendo a classe 'loaded'
-                    // dando um pequeno atraso no redirecionamento do URL
-                    setTimeout(() => { 
-                        window.location.href = href;
-                    }, 500); // (0,5 segundos) antes de redirecionar
-                });
-            });
-
-            document.body.classList.add('loaded'); /* Adicionando uma classe 'loaded' ao 'body' após o carregamento do conteúdo */
-        });
-    </script>
 </body>
+</html>
 </html>
 ```
 ### CSS DA PAGE PRODUTOS.HTML
@@ -460,8 +353,6 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
     margin-bottom: 20px;
     color: #e2cd65;;
 }
-
-
 
 .categoria-item:hover {
     border-color:  #e2cd65;;
@@ -634,7 +525,7 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
 </head>
 <body class="pagina-contato">
     <header>
-        <img src="In_Bloom-logo.png" alt="Logo" class="logo">
+        <img src="img/banners/In_Bloom-logo.png" alt="Logo" class="logo">
         <nav>
             <a href="index.html" class="nav-item">Home</a>
             <a href="produtos.html" class="nav-item">Produtos</a>
@@ -685,12 +576,11 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
     <!-- Rodapé da página -->
     <footer>
         <div class="social-icons">
-            <a href="https://github.com/Maysa502/In-Bloom"><img src="github.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/maysaarruda"><img src="linkedin.png" alt="LinkedIn"></a>
-            <a href="mailto:inbloomLoja87@gmail.com"><img src="google.png" alt="Gmail"></a>
+            <a href="https://github.com/Maysa502/In-Bloom"><img src="img/icons/github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/maysaarruda"><img src="img/icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="mailto:inbloomLoja87@gmail.com"><img src="img/icons/google.png" alt="Gmail"></a>
         </div>
     </footer>
-
     <!-- configurando a mensagem de confirmação por js -->
     <script>
         function showConfirmationMessage() {
@@ -701,61 +591,11 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
             messageContainer.appendChild(messageDiv); // Colocando o 'div' ao contêiner de mensagens que criei la em cima
         }
     </script>
-
-     <!-- Aplicando o mesmo codigo de js para garantir o funcionamento das paginas   -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            /* Colocando o efeito suave para seções da página */
-            const links = document.querySelectorAll('a[href^="#"]');
-            /* document.querySelectorAll() é um método que permite selecionar elementos do DOM
-            'a[href^="#"]' é o seletor CSS 
-            a: Seleciona todos os elementos âncora (link internos) (<a>)
-            [href^="#"]: Filtra apenas os elementos âncora que têm o atributo href começando com #
-            Resumindo essa linha foi usada para selecionar todos os links âncora da página role suavemente para seções específicas*/
-
-
-
-            /*Selecionando todos elementos do trecho anterior e executando*/
-            links.forEach(link => {
-                link.addEventListener('click', function(e) { // add um ouvinte de eventos
-                    e.preventDefault(); //  impedindo o comportamento padrão do navegador para outros links âncoras
-                    const targetId = this.getAttribute('href').substring(1);  // Obtém o ID do elemento alvo removend o '#'
-                    const targetElement = document.getElementById(targetId); // Encontra o elemento na página com o ID correspondente
-                    // Parte do código é importantissima para localizar os elemento na página para onde deseja rolar suavemente quando um link âncora é clicado
-
-
-                    if (targetElement) {
-                        window.scrollTo({ // Rola a página suavemente até o elemento de destino
-                            top: targetElement.offsetTop - 80, // Defindo a posição de rolagem com um deslocamento de 80 pixels do topo
-                            behavior: 'smooth' // Anima a rolagem suavemente
-                        });
-                    }
-                });
-            });
-
-            /* Transição suave ao navegar entre páginas */
-            const navItems = document.querySelectorAll('nav a'); // Selecionando todos os elementos âncora dentro do elemento <nav>
-            navItems.forEach(item => { // Itera sobre cada elemento âncora encontrado
-                item.addEventListener('click', function(e) { // Adicionando um ouvinte de evento de clique a cada link de navegação
-                    e.preventDefault();  // Impede  que navegue por outras paginas 
-                    const href = this.getAttribute('href'); // Obtém o href do link clicado
-                    document.body.classList.remove('loaded'); // Removendo a classe 'loaded'
-                    // dando um pequeno atraso no redirecionamento do URL
-                    setTimeout(() => { 
-                        window.location.href = href;
-                    }, 500); // (0,5 segundos) antes de redirecionar
-                });
-            });
-
-            document.body.classList.add('loaded'); /* Adicionando uma classe 'loaded' ao 'body' após o carregamento do conteúdo */
-        });
-    </script>
-
 </body>
 </html>
 ```
 
-### CSS DA PAGE CONTATOS+HTML
+### CSS DA PAGE CONTATOS.HTML
 ```css
 /* css para a página de contatos */
 .pagina-contato {
@@ -921,7 +761,7 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
 </head>
 <body class="pagina-sobre">
     <header>
-        <img src="In_Bloom-logo.png" alt="Logo" class="logo">
+        <img src="img/banners/In_Bloom-logo.png" alt="Logo" class="logo">
         <nav>
             <a href="index.html" class="nav-item">Home</a>
             <a href="produtos.html" class="nav-item">Produtos</a>
@@ -963,62 +803,11 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
     </main>
     <footer>
         <div class="social-icons">
-            <a href="https://github.com/Maysa502/In-Bloom"><img src="github.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/maysaarruda"><img src="linkedin.png" alt="LinkedIn"></a>
-            <a href="mailto:inbloomLoja87@gmail.com"><img src="google.png" alt="Gmail"></a>
+            <a href="https://github.com/Maysa502/In-Bloom"><img src="img/icons/github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/maysaarruda"><img src="img/icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="mailto:inbloomLoja87@gmail.com"><img src="img/icons/google.png" alt="Gmail"></a>
         </div>
     </footer>
-
-    <!--Aplicando o mesmo codigo de js para garantir o funcionamento das paginas-->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            /* Colocando o efeito suave para seções da página */
-            const links = document.querySelectorAll('a[href^="#"]');
-            /* document.querySelectorAll() é um método que permite selecionar elementos do DOM
-            'a[href^="#"]' é o seletor CSS 
-            a: Seleciona todos os elementos âncora (link internos) (<a>)
-            [href^="#"]: Filtra apenas os elementos âncora que têm o atributo href começando com #
-            Resumindo essa linha foi usada para selecionar todos os links âncora da página role suavemente para seções específicas*/
-
-
-
-            /*Selecionando todos elementos do trecho anterior e executando*/
-            links.forEach(link => {
-                link.addEventListener('click', function(e) { // add um ouvinte de eventos
-                    e.preventDefault(); //  impedindo o comportamento padrão do navegador para outros links âncoras
-                    const targetId = this.getAttribute('href').substring(1);  // Obtém o ID do elemento alvo removend o '#'
-                    const targetElement = document.getElementById(targetId); // Encontra o elemento na página com o ID correspondente
-                    // Parte do código é importantissima para localizar os elemento na página para onde deseja rolar suavemente quando um link âncora é clicado
-
-
-                    if (targetElement) {
-                        window.scrollTo({ // Rola a página suavemente até o elemento de destino
-                            top: targetElement.offsetTop - 80, // Defindo a posição de rolagem com um deslocamento de 80 pixels do topo
-                            behavior: 'smooth' // Anima a rolagem suavemente
-                        });
-                    }
-                });
-            });
-
-            /* Transição suave ao navegar entre páginas */
-            const navItems = document.querySelectorAll('nav a'); // Selecionando todos os elementos âncora dentro do elemento <nav>
-            navItems.forEach(item => { // Itera sobre cada elemento âncora encontrado
-                item.addEventListener('click', function(e) { // Adicionando um ouvinte de evento de clique a cada link de navegação
-                    e.preventDefault();  // Impede  que navegue por outras paginas 
-                    const href = this.getAttribute('href'); // Obtém o href do link clicado
-                    document.body.classList.remove('loaded'); // Removendo a classe 'loaded'
-                    // dando um pequeno atraso no redirecionamento do URL
-                    setTimeout(() => { 
-                        window.location.href = href;
-                    }, 500); // (0,5 segundos) antes de redirecionar
-                });
-            });
-
-            document.body.classList.add('loaded'); /* Adicionando uma classe 'loaded' ao 'body' após o carregamento do conteúdo */
-        });
-    </script>
-
-
 </body>
 </html>
 ```
@@ -1113,229 +902,6 @@ A divisão entre código inicial e finalização permitiu uma abordagem iterativ
 }
 ```
 
-## PAGE COMPRA_PRODUTO.HTML
-
-### Codigo Inicial
-```html
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Produto</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="pagina-produto-detalhe">
-    <header>
-        <img src="In_Bloom-logo.png" alt="Logo In Bloom" class="logo">
-        <nav>
-            <a href="index.html" class="nav-item">Home</a>
-            <a href="produtos.html" class="nav-item active">Produtos</a>
-            <a href="contatos.html" class="nav-item">Contatos</a>
-            <a href="sobre.html" class="nav-item">Sobre</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="produto-detalhe">
-            <h1 class="produto-titulo">Disco</h1>
-            <div class="produto-conteudo">
-                <div class="produto-imagem">
-                    <img src="produto1.png" alt="Disco" class="imagem-ampliada">
-                </div>
-                <div class="produto-info">
-                    <p class="produto-preco">R$ 175,00</p>
-                    <p class="produto-descricao">
-                        Este disco é uma edição especial com faixas exclusivas e qualidade de áudio superior. Perfeito para fãs colecionadores.
-                    </p>
-                    <button class="produto-comprar">Comprar</button>
-                    <button class="produto-carrinho">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="social-icons">
-            <a href="#"><img src="facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram.png" alt="Instagram"></a>
-        </div>
-    </footer>
-</body>
-</html>
-
-```
-### Codigo Final
-```html
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Produto</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-</head>
-<body class="pagina-produto-detalhe">
-    <header>
-        <img src="In_Bloom-logo.png" alt="Logo In Bloom" class="logo">
-        <nav>
-            <a href="index.html" class="nav-item">Home</a>
-            <a href="produtos.html" class="nav-item active">Produtos</a>
-            <a href="contatos.html" class="nav-item">Contatos</a>
-            <a href="sobre.html" class="nav-item">Sobre</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="produto-detalhe">
-            <h1 id="produto-titulo" class="produto-titulo"></h1>
-            <div class="produto-conteudo">
-                <div class="produto-imagem">
-                    <img id="produto-imagem" src="" alt="" class="imagem-ampliada">
-                </div>
-                <div class="produto-info">
-                    <p id="produto-preco" class="produto-preco"></p>
-                    <p id="produto-descricao" class="produto-descricao"></p>
-                    <button class="produto-comprar" onclick="comprarProduto()">Comprar</button>
-                    <button class="produto-carrinho" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
-                    <p id="mensagem-carrinho" class="mensagem-carrinho"></p>
-                    <p id="mensagem-compra" class="mensagem-compra"></p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="social-icons">
-            <a href="https://github.com/Maysa502/In-Bloom"><img src="github.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/maysaarruda"><img src="linkedin.png" alt="LinkedIn"></a>
-            <a href="mailto:inbloomLoja87@gmail.com"><img src="google.png" alt="Gmail"></a>
-        </div>
-    </footer>
-
-    <script src="scripts.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('a[href^="#"]');
-            
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            const navItems = document.querySelectorAll('nav a');
-            navItems.forEach(item => {
-                item.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const href = this.getAttribute('href');
-                    document.body.classList.remove('loaded');
-                    setTimeout(() => {
-                        window.location.href = href;
-                    }, 500); // Tempo para a animação de fade-out
-                });
-            });
-
-            document.body.classList.add('loaded');
-        });
-
-        function comprarProduto() {
-            const mensagemCompra = document.getElementById('mensagem-compra');
-            mensagemCompra.textContent = 'Produto comprado com sucesso!';
-        }
-
-        function adicionarAoCarrinho() {
-            const mensagemCarrinho = document.getElementById('mensagem-carrinho');
-            mensagemCarrinho.textContent = 'Produto adicionado ao carrinho!';
-        }
-    </script>
-</body>
-</html>
-```
-### CSS DA PAGE COMPRA_PRODUTOS
-```css
-/* css para a página compra produto*/
-
-.pagina-produto-detalhe {
-    background-image: url('background-CompraProduto.png');
-    
-}
-
-.pagina-produto-detalhe .produto-detalhe {
-    padding: 20px;
-}
-
-.pagina-produto-detalhe .produto-titulo {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: olive; 
-}
-
-.pagina-produto-detalhe .produto-conteudo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.pagina-produto-detalhe .produto-imagem {
-    flex: 1;
-    text-align: center;
-}
-
-.pagina-produto-detalhe .imagem-ampliada {
-    max-width: 100%;
-    height: auto;
-}
-
-.pagina-produto-detalhe .produto-info {
-    flex: 1;
-    padding: 20px;
-}
-
-.pagina-produto-detalhe .produto-preco {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #897834;
-}
-
-.pagina-produto-detalhe .produto-descricao {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #897834; 
-}
-
-.mensagem-carrinho {
-    font-size: 1em;
-    margin-top: 10px;
-    color: #897834; 
-}
-
-
-/* css caixa de confirmação */
-.confirmation-message {
-    border: 2px solid #897834; 
-    color: whitesmoke;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #897834; 
-    border-radius: 5px; 
-    font-size: 16px;
-    text-align: center;
-}
-```
 
 ### SCRIPTS.JS
 
@@ -1362,41 +928,6 @@ const produtos = {
         imagem: "produto3.png"
     }
 };
-
-// Detalhando os produtos
-function carregarProduto() {
-    // Obtém os parâmetros da URL
-    const params = new URLSearchParams(window.location.search);
-    const produtoId = params.get('produto');
-    
-    // Verifica se o produto existe nos dados simulados
-    if(produtos[produtoId]) {
-        document.getElementById('produto-titulo').textContent = produtos[produtoId].titulo;
-        document.getElementById('produto-preco').textContent = produtos[produtoId].preco;
-        document.getElementById('produto-descricao').textContent = produtos[produtoId].descricao;
-        document.getElementById('produto-imagem').src = produtos[produtoId].imagem;
-        document.getElementById('produto-imagem').alt = produtos[produtoId].titulo;
-    } else {
-        document.getElementById('produto-titulo').textContent = "Produto não encontrado";
-    }
-}
-
-// Função para adicionar o produto ao carrinho e exibir mensagem
-function adicionarAoCarrinho() {
-    const mensagemCarrinho = document.getElementById('mensagem-carrinho');
-    mensagemCarrinho.textContent = "Produto adicionado ao carrinho!";
-    mensagemCarrinho.style.color = "white";
-}
-
-// Função para exibir mensagem de compra
-function comprarProduto() {
-    const mensagemCompra = document.getElementById('mensagem-compra');
-    mensagemCompra.textContent = "Produto no carrinho aguardando pagamento.";
-    mensagemCompra.style.color = "green";
-}
-
-// chamando a função ao carregar a pagina
-window.onload = carregarProduto;
 ```
 
 ### CSS 
